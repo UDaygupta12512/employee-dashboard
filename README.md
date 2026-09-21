@@ -1,30 +1,39 @@
-# Employee Dashboard
+# Employee Directory App
 
-A Next.js + Tailwind CSS employee management dashboard.
+A small project I built to practice React, TypeScript, and Tailwind CSS. It's basically an employee management dashboard with filtering, sorting, and form validation.
 
-## Features
+## What it does
 
-- 📋 **Employee Table** — Displays name, email, department, and status
-- 🔍 **Live Search** — Filter employees by name as you type
-- 🎛️ **Status Filter** — Dropdown to filter by All / Active / On Leave
-- ➕ **Add Employee** — Form popup with validation (name required, valid email)
+- Shows a table of employees with their name, email, department, and status
+- Search bar that filters by name in real time
+- Dropdown to filter by status (Active / On Leave)
+- Click any column header to sort the table
+- "Add Employee" button opens a popup form — name and email are validated before saving
+- Hover over a row to see delete and toggle-status buttons
+- Data is saved to localStorage so it persists on refresh
 
-## Tech Stack
+## Stack
 
-- **Next.js 14** (App Router)
-- **React 18**
-- **TypeScript**
-- **Tailwind CSS**
+- Next.js 14 (App Router)
+- React 18 + TypeScript
+- Tailwind CSS
 
-## Getting Started
+## Running locally
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Then open http://localhost:3000
+
+## Notes
+
+- New employees are added as "Active" by default
+- Email validation uses a regex — might switch to Zod later
+- TODO: add pagination once the list gets long
+- TODO: add an edit modal so you can update existing records
 
 ## Deployment
 
-Deployed on **Vercel** — see the live link in submission.
+Hosted on Vercel.
